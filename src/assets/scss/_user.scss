@@ -1,15 +1,48 @@
-// 
+//
 // user.scss
 // Use this to write your custom SCSS
 //
-.nav-background-semi{
-    background-color: rgba(0, 0, 0, 0.438);
+.nav-background-semi {
+	background-color: rgba(0, 0, 0, 0.438);
 }
-.navbar-brand{
-
-    margin-left: 2rem;
+.navbar-brand {
+	margin-left: 2rem;
 }
 .header-btn {
-    margin-left: 3rem;
-    margin-right:2rem
+	margin-left: 3rem;
+	margin-right: 2rem;
+}
+.borderbox {
+	height: 10px;
+}
+.borderbox > img {
+	vertical-align: top;
+}
+.headerVideo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	max-width: 100%;
+	z-index: -10;
+}
+.videoContainer {
+	height: 80vh;
+}
+.videoOverlay {
+	position: relative;
+	top: 50%;
+	//background-color: rgba(151, 79, 27, 0.3);
+	//background: rgb(231, 181, 12);
+	background: linear-gradient(
+		90deg,
+		rgba(231, 181, 12, 0.011642156862745057) 0%,
+		rgba(163, 92, 29, 0.3) 25%,
+		rgba(163, 92, 29, 0.3) 75%,
+		rgba(231, 181, 12, 0) 100%
+	);
+	border-radius: 10px;
+}
+.bgBlack {
+	background-color: black;
 }

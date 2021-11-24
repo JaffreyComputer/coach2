@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Terra Nova Travel</title>
+		@@include("../partials/head.html")
+
+		<style>
+			.headerVideo {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				max-width: 100%;
+				z-index: -10;
+			}
+			.videoContainer {
+				height: 80vh;
+			}
+			.videoOverlay {
+				position: relative;
+				top: 50%;
+				background-color: rgba(151, 79, 27, 0.3);
+				border-radius: 10px;
+			}
+			.borderbox {
+				vertical-align: top;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- header -->
+		@@include("../partials/navbar.html", { "classList": "fixed-top border-3 " })
+		<!-- hero section -->
+		<div class="container videoContainer">
+			<video autoplay muted class="headerVideo">
+				<source src="../assets/video/video-tnt.mp4" type="video/mp4" />
+			</video>
+
+			<div class="col h-100">
+				<h1
+					class="text-light font-weight-bold text-white text-center"
+					id="videoOverlay"
+				>
+					Your Invitation to Voyage…
+				</h1>
+			</div>
+		</div>
+
+		<div class="bg-dark">
+			<div>
+				<img
+					src="../assets/img/tnt-banner-2.jpg"
+					width="100%"
+					class="borderbox"
+				/>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="offset-xl-3 col-xl-6 col-md-12 col-12">
+						<div class="mb-8 text-center">
+							<h2 class="mb-3 h1">A Boy Before Coach</h2>
+							<p class="lead">
+								Before Coach became a media sensation for empowering people and
+								sharing 'Inspiration' across the globe, he had his share of
+								obstacles to overcome.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
