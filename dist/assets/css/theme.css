@@ -6661,8 +6661,6 @@ fieldset:disabled .btn {
   font-size: 1.07rem;
   text-decoration: none;
   white-space: nowrap;
-  margin-left: 2rem;
-
 }
 
 .navbar-nav {
@@ -29383,6 +29381,21 @@ div.im-colormask>div {
   caret-shape: block;
 }
 
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  color: aliceblue;
+}
+
 .nav-background-semi {
   background-color: rgba(0, 0, 0, 0.438);
 }
@@ -29467,29 +29480,11 @@ li.list-group-item {
   padding: 6 px 10 px;
 }
 
-.footer {
-  background: url("../images/footer-bg-2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 .footer-text {
   font-size: 0.8rem;
   color: #968c7f;
   background-color: #3a23104f;
-}
-
-@media only screen and (max-width: 600px) {
-
-  .px-8,
-  .px-10,
-  .mx-12 {
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
-  }
 }
 
 /*# sourceMappingURL=theme.css.map */
