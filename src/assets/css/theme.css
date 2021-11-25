@@ -27950,4 +27950,42 @@ div.im-colormask > div {
 .bgBlack {
   background-color: black;
 }
+
+.bgBeige {
+  background-color: #f5efe5;
+}
+
+.textPrimary {
+  color: #9f5313;
+}
+
+a {
+  color: #9f5313;
+}
+
+h3.mb-3.fs-5, .mb-3.fs-5.h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+ul.list-group {
+  font-size: 0.6rem;
+}
+
+.btn-primary-link {
+  font-weight: 700;
+  color: #9f5313;
+  text-decoration: none;
+  border-bottom: 2px solid #9f5313;
+}
+
+.btn-primary-link:hover {
+  color: #ff3912;
+  text-decoration: none;
+  border-bottom: 2 px solid #ff3912;
+}
+
+li.list-group-item {
+  padding: 6 px 10 px;
+}
 /*# sourceMappingURL=theme.css.map */
