@@ -28001,4 +28001,15 @@ li.list-group-item {
   color: #968c7f;
   background-color: #3a23104f;
 }
+
+@media only screen and (max-width: 600px) {
+  .px-8,
+.px-10,
+.mx-12 {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+}
 /*# sourceMappingURL=theme.css.map */

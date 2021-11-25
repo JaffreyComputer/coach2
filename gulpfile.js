@@ -25,12 +25,12 @@ const sourcemaps = require('gulp-sourcemaps');
 // Paths to project folders
 
 
- const paths = {
-  base:{
+const paths = {
+  base: {
     base: './',
     node: './node_modules'
-    },
-  src:{
+  },
+  src: {
     basesrc: './src',
     basesrcfiles: './src/**/*',
     scss: './src/assets/scss/**/*.scss',
@@ -41,47 +41,47 @@ const sourcemaps = require('gulp-sourcemaps');
     fonts: './src/assets/fonts/**/*',
     assets: './src/assets/**/*',
     partials: '.src/partials/**/*'
-    },
-  temp:{
+  },
+  temp: {
     basetemp: './.temp'
-    },
-  dist:{
+  },
+  dist: {
     basedist: './dist',
     js: './dist/assets/js',
     images: './dist/assets/images',
     css: './dist/assets/css',
     fonts: './dist/assets/fonts',
     libs: './dist/assets/libs',
-    css:  './dist/assets/css'
+    css: './dist/assets/css'
 
-    }
+  }
 }
 
 
 // SCSS to CSS
 function scss(callback) {
-    return src(paths.src.scss)
-        .pipe(sourcemaps.init())
-        .pipe(sass().on("error", sass.logError))
-        .pipe(gulpautoprefixer())
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest(paths.src.css))
-        .pipe(browsersync.stream());
-    callback();
+  return src(paths.src.scss)
+    .pipe(sourcemaps.init())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulpautoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest(paths.src.css))
+    .pipe(browsersync.stream());
+  callback();
 }
 
 
 
 // CSS
 function css(callback) {
-    return src(paths.src.scss)
-        .pipe(sourcemaps.init())
-        .pipe(sass().on("error", sass.logError))
-        .pipe(gulpautoprefixer())
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest(paths.dist.css))
-        .pipe(browsersync.stream());
-    callback();
+  return src(paths.src.scss)
+    .pipe(sourcemaps.init())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulpautoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest(paths.dist.css))
+    .pipe(browsersync.stream());
+  callback();
 }
 
 
@@ -89,36 +89,36 @@ function css(callback) {
 // Image
 function images(callback) {
   return src(paths.src.images)
-        .pipe(dest(paths.dist.images))
-    callback();
+    .pipe(dest(paths.dist.images))
+  callback();
 }
 
 
 // Font task
 function fonts(callback) {
-    return src(paths.src.fonts)
+  return src(paths.src.fonts)
     .pipe(dest(paths.dist.fonts))
-    callback();
+  callback();
 }
 
 
 // HTML
 function html(callback) {
   return src([paths.src.html, '!./src/partials/**/*'])
-      .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file'
-      }))
-    
-        .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
-        .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
-        .pipe(useref())
-        .pipe(cached())
-        .pipe(gulpIf('*.css', postcss([ autoprefixer(), cssnano() ]))) // PostCSS plugins with cssnano
-        .pipe(gulpIf('*.js', terser()))
-        .pipe(dest(paths.dist.basedist))
-        .pipe(browsersync.stream());
-    callback();
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+
+    .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
+    .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
+    .pipe(useref())
+    .pipe(cached())
+    .pipe(gulpIf('*.css', postcss([autoprefixer(), cssnano()]))) // PostCSS plugins with cssnano
+    .pipe(gulpIf('*.js', terser()))
+    .pipe(dest(paths.dist.basedist))
+    .pipe(browsersync.stream());
+  callback();
 }
 
 
@@ -131,13 +131,13 @@ function fileincludeTask(callback) {
     }))
     .pipe(cached())
     .pipe(dest(paths.temp.basetemp));
-    callback();
+  callback();
 }
 
 
 // Copy libs file from nodemodules to dist
 function copyLibs(callback) {
-  return src(npmDist(),{base: paths.base.node})
+  return src(npmDist(), { base: paths.base.node })
     .pipe(dest(paths.dist.libs));
   callback();
 }
@@ -145,20 +145,20 @@ function copyLibs(callback) {
 
 // Clean .temp folder
 function cleanTemp(callback) {
-    del.sync(paths.temp.basetemp);
-    callback();
+  del.sync(paths.temp.basetemp);
+  callback();
 }
 
 
 // Clean Dist folder
 function cleanDist(callback) {
-     del.sync(paths.dist.basedist);
-     callback();
+  del.sync(paths.dist.basedist);
+  callback();
 }
 
 
 // Browser Sync Serve
-function browsersyncServe(callback){
+function browsersyncServe(callback) {
   browsersync.init({
     server: {
       baseDir: [paths.temp.basetemp, paths.src.basesrc, paths.base.base]
@@ -169,22 +169,22 @@ function browsersyncServe(callback){
 
 
 // SyncReload
-function syncReload(callback){
+function syncReload(callback) {
   browsersync.reload();
   callback();
 }
 
 
 // Watch Task
-function watchTask(){
-  watch(paths.src.html, series( fileincludeTask, syncReload));
+function watchTask() {
+  watch(paths.src.html, series(fileincludeTask, syncReload));
   watch([paths.src.images, paths.src.fonts], series(images, fonts));
   watch([paths.src.scss], series(scss, syncReload));
 }
 
 
 // Default Task Preview
-exports.default = series( fileincludeTask, browsersyncServe, watchTask );
+exports.default = series(fileincludeTask, browsersyncServe, watchTask);
 
 
 // Build Task for Dist
