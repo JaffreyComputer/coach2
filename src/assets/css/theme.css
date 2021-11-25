@@ -27988,4 +27988,17 @@ ul.list-group {
 li.list-group-item {
   padding: 6 px 10 px;
 }
+
+.footer {
+  background: url("/assets/images/footer-bg-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  color: #968c7f;
+  background-color: #3a23104f;
+}
 /*# sourceMappingURL=theme.css.map */
