@@ -27918,7 +27918,12 @@ h2,
 .h2,
 h1,
 .h1 {
-  color: aliceblue;
+  color: #7a8fa1;
+}
+
+p {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .nav-background-semi {
