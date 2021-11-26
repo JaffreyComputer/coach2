@@ -27921,11 +27921,6 @@ h1,
   color: #7a8fa1;
 }
 
-p {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-}
-
 .nav-background-semi {
   background-color: rgba(0, 0, 0, 0.438);
 }
@@ -28034,5 +28029,16 @@ li.list-group-item {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
+}
+
+.img_right {
+  float: left;
+}
+
+.compassBG {
+  background-image: url("/assets/images/Compass-09.png");
+  -o-object-fit: fill;
+     object-fit: fill;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=theme.css.map */
