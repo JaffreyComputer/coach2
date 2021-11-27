@@ -46,13 +46,13 @@ const paths = {
     basetemp: './.temp'
   },
   dist: {
-    basedist: './dist',
-    js: './dist/assets/js',
-    images: './dist/assets/images',
-    css: './dist/assets/css',
-    fonts: './dist/assets/fonts',
-    libs: './dist/assets/libs',
-    css: './dist/assets/css'
+    basedist: 'C:/Users/jdavi/Documents/xampp8/htdocs/tearraNova_dev_live/dist',
+    js: 'C:/Users/jdavi/Documents/xampp8/htdocs/tearraNova_dev_live/dist/assets/js',
+    images: 'C:/Users/jdavi/Documents/xampp8/htdocs/tearraNova_dev_live/dist/assets/images',
+    css: 'C:/Users/jdavi/Documents/xampp8/htdocs/tearraNova_dev_live/dist/assets/css',
+    fonts: 'C:/Users/jdavi/Documents/xampp8/htdocs/tearraNova_dev_live/dist/assets/fonts',
+    libs: 'C:/Users/jdavi/Documents/xampp8/htdocs/tearraNova_dev_live/dist/assets/libs',
+    css: 'C:/Users/jdavi/Documents/xampp8/htdocs/tearraNova_dev_live/dist/assets/css'
 
   }
 }
