@@ -27952,7 +27952,8 @@ h1,
 }
 
 .videoContainer {
-  height: 80vh;
+  height: 50vw;
+  max-height: 80vh;
 }
 
 .videoOverlay {
@@ -27984,7 +27985,10 @@ h3.mb-3.fs-5, .mb-3.fs-5.h3 {
 }
 
 ul.list-group {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .btn-primary-link {
@@ -28001,7 +28005,7 @@ ul.list-group {
 }
 
 li.list-group-item {
-  padding: 6 px 10 px;
+  padding: 0.5rem;
 }
 
 .footer {
@@ -28017,6 +28021,19 @@ li.list-group-item {
   background-color: #3a23104f;
 }
 
+#footer-img-profile {
+  max-width: 250px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #footer-img-profile {
+    display: none;
+  }
+
+  #footer-img-logo {
+    width: 100%;
+  }
+}
 .dropdown-item {
   display: block;
   width: 100%;
