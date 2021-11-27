@@ -28034,4 +28034,11 @@ li.list-group-item {
 .img_right {
   float: left;
 }
+
+.compassBG {
+  background-image: url("/assets/images/Compass-09.png");
+  -o-object-fit: fill;
+     object-fit: fill;
+  background-repeat: no-repeat;
+}
 /*# sourceMappingURL=theme.css.map */

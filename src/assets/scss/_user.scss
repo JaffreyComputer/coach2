@@ -43,7 +43,8 @@ h1,
 	z-index: -10;
 }
 .videoContainer {
-	height: 80vh;
+	height: calc(100vw / 2);
+	max-height: 80vh;
 }
 .videoOverlay {
 	position: relative;
@@ -75,7 +76,8 @@ h3.mb-3.fs-5 {
 	text-transform: uppercase;
 }
 ul.list-group {
-	font-size: 0.6rem;
+	font-size: 0.8rem;
+	width: fit-content;
 }
 .btn-primary-link {
 	font-weight: 700;
@@ -90,7 +92,7 @@ ul.list-group {
 	border-bottom: 2 px solid #ff3912;
 }
 li.list-group-item {
-	padding: 6 px 10 px;
+	padding: 0.5rem;
 }
 .footer {
 	background: url("/assets/images/footer-bg-2.jpg");
@@ -103,7 +105,18 @@ li.list-group-item {
 	color: rgb(150, 140, 127);
 	background-color: #3a23104f;
 }
+#footer-img-profile {
+	max-width: 250px;
+}
 
+@media only screen and (max-width: 1000px) {
+	#footer-img-profile {
+		display: none;
+	}
+	#footer-img-logo {
+		width: 100%;
+	}
+}
 .dropdown-item {
 	display: block;
 	width: 100%;
