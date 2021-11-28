@@ -29442,13 +29442,14 @@ h1,
   background-color: black;
 }
 
+.bgGreen {
+  background-color: green;
+}
+
 .bgBeige {
   background-color: #f5efe5;
 }
 
-.bgGreen {
-  background-color: green;
-}
 
 .textPrimary {
   color: #9f5313;
