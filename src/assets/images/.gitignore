@@ -1,4 +1,7 @@
-.mp4
-.jpg
-.png
-.mov
+*.mp4
+*.jpg
+*.png
+*.mov
+*.gif
+*.pdf
+
