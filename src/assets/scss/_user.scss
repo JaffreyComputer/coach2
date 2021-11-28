@@ -64,6 +64,11 @@ h1,
 .bgBeige {
 	background-color: rgba(245, 239, 229, 1);
 }
+.bg-success {
+	--bs-bg-opacity: 1;
+	background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+}
+
 .textPrimary {
 	color: rgba(159, 83, 19, 1);
 }
