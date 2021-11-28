@@ -95,7 +95,7 @@ li.list-group-item {
 	padding: 0.5rem;
 }
 .footer {
-	background: url("/assets/images/footer-bg-2.jpg");
+	background: url("@@webRoot/assets/images/footer-bg-2.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -134,7 +134,7 @@ li.list-group-item {
 	float: left;
 }
 .compassBG {
-	background-image: url("/assets/images/Compass-09.png");
+	background-image: url("@@webRoot/assets/images/Compass-09.png");
 	object-fit: fill;
 	background-repeat: no-repeat;
 }

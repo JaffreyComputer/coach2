@@ -28009,7 +28009,7 @@ li.list-group-item {
 }
 
 .footer {
-  background: url("/assets/images/footer-bg-2.jpg");
+  background: url("@@webRoot/assets/images/footer-bg-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -28053,7 +28053,7 @@ li.list-group-item {
 }
 
 .compassBG {
-  background-image: url("/assets/images/Compass-09.png");
+  background-image: url("@@webRoot/assets/images/Compass-09.png");
   -o-object-fit: fill;
      object-fit: fill;
   background-repeat: no-repeat;
