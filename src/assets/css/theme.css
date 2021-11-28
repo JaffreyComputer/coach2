@@ -27959,7 +27959,7 @@ h1,
 .videoOverlay {
   position: relative;
   top: 50%;
-  background: linear-gradient(90deg, rgba(231, 181, 12, 0.0116421569) 0%, rgba(163, 92, 29, 0.3) 25%, rgba(163, 92, 29, 0.3) 75%, rgba(231, 181, 12, 0) 100%);
+  background: linear-gradient(90deg, rgba(231, 181, 12, 0.0116421569) 10%, rgba(163, 92, 29, 0.4) 25%, rgba(163, 92, 29, 0.4) 75%, rgba(231, 181, 12, 0) 100%);
   border-radius: 10px;
 }
 
