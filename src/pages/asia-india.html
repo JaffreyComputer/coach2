@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Terra Nova Travel</title>
+		@@include("../partials/head.html")
+	</head>
+
+	<body>
+		<!-- header -->
+		@@include("../partials/navbar.html", { "classList": "fixed-top border-3 " })
+		<!-- Content -->
+		<div
+			class="col"
+			style="
+				background-image: url('@@webRoot/assets/images/1200-pexels-taryn-elliott-3889765.jpg');
+				height: 100vh;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: bottom;
+				bottom: 0;
+			"
+		>
+			<div class="row pt-22 text-center w-sm-75 mx-auto">
+				<h1 class="videoOverlay text-white display-1">Amazing Asia and India…</h1>
+			</div>
+		</div>
+
+		<div class="col">
+			@@include("../partials/borderPattern.html")
+
+			<div class="row bgBlack py-5">
+				<div class="container">
+					<div class="w-75 mx-auto pt-5 text-center">
+						<h3>Asia Headline Travel Trip Exciting and Inspiring</h3>
+						<p class="pt-5 blockquote w-75 flex-wrap mx-auto">
+							Arum hilibus, seque dolorro volorerum quo blacerspit untibus, inciaectur si dus si od quiae nosae core velest, sinust id ut aut fuga. Nam
+							eSediamus andiscia quam, et earum a nos est harciis acerunti voluptissit, culliquaero qui ducid exceptatur aut odit laborem periae. Nequodi alique
+							comni doluptur. Arum hilibus, seque dolorro volorerum quo blacerspit untibus, inciaectur si dus si od quiae nosae core velest, sinust id ut aut
+							fuga. Nam eSediamus andiscia quam, et earum a nos est harciis acerunti voluptissit, culliquaero qui ducid exceptatur aut odit laborem periae.
+							Nequodi alique comni doluptur.
+						</p>
+					</div>
+
+					<div id="carouselExampleIndicators" class="carousel slide w-75 mx-auto pt-5" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="https://placeimg.com/600/300/nature" class="d-block w-100" alt="..." />
+							</div>
+							<div class="carousel-item">
+								<img src="https://placeimg.com/600/300/nature" class="d-block w-100" alt="..." />
+							</div>
+							<div class="carousel-item">
+								<img src="https://placeimg.com/600/300/nature" class="d-block w-100" alt="..." />
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+
+					<div class="w-75 mx-auto pt-5 text-center">
+						<h4>The Magic of India Headline Goes here</h4>
+						<p>
+							Arum hilibus, seque dolorro volorerum quo blacerspit untibus, inciaectur si dus si od quiae nosae core velest, sinust id ut aut fuga. Nam
+							eSediamus andiscia quam, et earum a nos est harciis acerunti voluptissit, culliquaero qui ducid exceptatur aut odit laborem periae. Nequodi alique
+							comni doluptur. Arum hilibus, seque dolorro volorerum quo blacerspit untibus, inciaectur si dus si od quiae nosae core velest, sinust id ut aut
+							fuga. Nam eSediamus andiscia quam, et earum a nos est harciis acerunti voluptissit, culliquaero qui ducid exceptatur aut odit laborem periae.
+							Nequodi alique comni doluptur
+						</p>
+						<img src="#" style="width: 75%; height: 50px" />
+						<p>
+							Arum hilibus, seque dolorro volorerum quo blacerspit untibus, inciaectur si dus si od quiae nosae core velest, sinust id ut aut fuga. Nam
+							eSediamus andiscia quam, et earum a nos est harciis acerunti voluptissit, culliquaero qui ducid exceptatur aut odit laborem periae. Nequodi alique
+							comni doluptur
+						</p>
+
+						<div class="row justify-content-center py-5">
+							<div class="col-auto justify-content-center text-light border-start border-top border-bottom border-light border-3 p-2 fs-6 rounded-start">
+								FOR YOUR PSYCHIC READING CALL
+							</div>
+
+							<a
+								href="tel:1-900-123-4567 "
+								id="phonenumber"
+								class="
+									col-auto
+									bgGreen
+									text-light
+									border-end border-top border-bottom border-light border-3
+									p-2
+									fs-6
+									rounded-end
+									text-decoration-none
+									phonenumber
+								"
+								>1-900-BOO-SCARE</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+			@@include("../partials/borderPattern.html")
+		</div>
+
+		<div>
+			<!-- Footer-->
+			@@include("../partials/footer.html")
+		</div>
+	</body>
+</html>
