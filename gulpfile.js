@@ -184,7 +184,7 @@ function watchTask() {
 
 
 // Default Task Preview
-exports.default = series(fileincludeTask, browsersyncServe);
+exports.default = series(fileincludeTask, browsersyncServe, watchTask);
 
 
 // Build Task for Dist
